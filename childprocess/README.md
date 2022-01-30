@@ -7,6 +7,7 @@
 - 基本的には、`spawn()`, `exec()` を利用しておけば安定
   - windows かつ `execFile()` でファイルを起動する場合は注意
 - `exec()`, `execFile()` は callback 関数を付与できる
+- windows の場合, `windowsHide` オプションでコンソールの表示を防止できる
 - 細かい挙動は (後述)
 
 ## 主要コマンド
@@ -23,26 +24,11 @@ Note: ここで起動や発生と書いているのは spawn の翻訳として
 
 ## spawn
 
-### spawn オプション
-
-```ts
-interface SpawnOptions extends CommonSpawnOptions {
-  detached?: boolean | undefined
-}
-```
+- [child_process.spawn(command[, args][, options])](https://nodejs.org/api/child_process.html#child_processspawncommand-args-options)
 
 ## exec
 
-### exec オプション
-
-```ts
-interface ExecOptions extends CommonOptions {
-  shell?: string | undefined
-  signal?: AbortSignal | undefined
-  maxBuffer?: number | undefined
-  killSignal?: NodeJS.Signals | number | undefined
-}
-```
+[child_process.exec(command[, options][, callback])](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback)
 
 ## 細かい挙動
 

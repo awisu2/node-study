@@ -37,7 +37,8 @@ function windowsTasklist(opt = {}) {
   }
 
   // tasklist取得
-  const res = spawnSync('tasklist', args)
+  // windowsHideオプションで、コンソールウィンドの表示を防止
+  const res = spawnSync('tasklist', args, { windowsHide: true })
 
   // 解析して配列化
   const tasks = []
