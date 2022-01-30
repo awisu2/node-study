@@ -16,18 +16,27 @@ function spawnLs() {
 }
 
 // プロセスリストの取得
-function taskList() {
+function taskList(opt = {}) {
   if (pInfo.isWindows) {
-    return windowsTasklist()
+    return windowsTasklist(opt)
   } else {
     return
   }
 }
 
 // tasklist/process list の取得(windows用)
-function windowsTasklist() {
+// filterは meta(*) の利用が可能 (例: *xyz*)
+function windowsTasklist(opt = {}) {
+  if (typeof opt != 'object') opt = {}
+
   // csv形式で取得
-  const args = ['/FO', 'csv']
+  let args = ['/FO', 'csv']
+  // フィルタ
+  if (opt.filter) {
+    args = args.concat('/FI', `imagename eq ${opt.filter}`)
+  }
+
+  // tasklist取得
   const res = spawnSync('tasklist', args)
 
   // 解析して配列化
@@ -36,6 +45,8 @@ function windowsTasklist() {
   lines.splice(0, 1) // 先頭行はヘッダなので削除
   for (const line of lines) {
     const items = line.substring(1, line.length - 2).split('","')
+    if (items.length != 5) continue
+
     tasks.push({
       name: items[0], // イメージ名
       pid: items[1],
