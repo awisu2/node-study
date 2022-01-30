@@ -28,7 +28,7 @@ Note: ここで起動や発生と書いているのは spawn の翻訳として
 
 ## exec
 
-[child_process.exec(command[, options][, callback])](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback)
+- [child_process.exec(command[, options][, callback])](https://nodejs.org/api/child_process.html#child_processexeccommand-options-callback)
 
 ## 細かい挙動
 
