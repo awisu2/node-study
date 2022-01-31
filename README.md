@@ -2,6 +2,8 @@
 
 node についてのサンプルや勉强
 
+- 開発用途であれば package.json に `"private": true` を追加しておく
+
 ## docs
 
 - [module](./docs/module.md): モジュールについて(ESModules, CommonJs , Amd など)
