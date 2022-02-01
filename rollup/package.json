@@ -1,0 +1,19 @@
+{
+  "name": "rollup",
+  "version": "1.0.0",
+  "description": "[rollup\\.js](https://rollupjs.org/guide/en/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browser": "rollup main.js --file dist/browserBundle.js --format iife",
+    "node": "rollup main.js --file dist/nodeBundle.js --format cjs",
+    "umd": "rollup main.js --file dist/umdBundle.js --format umd --name \"myBundle\""
+  },
+  "keywords": [],
+  "author": "awisu2 <awisu2@gmail.com>",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "rollup": "^2.66.1"
+  }
+}
