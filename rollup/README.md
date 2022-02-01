@@ -37,7 +37,7 @@ note: [それぞれの出力結果](./docs/compiledResult.md)
 
 ## config 設定
 
-公式(サンプルあり): [\-\-configPlugin typescript](https://rollupjs.org/guide/en/#configuration-files)
+公式(サンプルあり): [Configuration Files](https://rollupjs.org/guide/en/#configuration-files)
 
 - 配列で export することで、複数の src 指定及び設定が可能
 - typescript で書きたい場合: `--configPlugin typescript` とつける
