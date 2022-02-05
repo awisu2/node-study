@@ -14,7 +14,7 @@
   - 細かくは document 参照([Lodash Documentation](https://lodash.com/docs/4.17.15))
   - 各機能の大分類を catogory と言う
     - "array", "collection", "date", "function", "lang", "object", "number", "seq", "string", "util"
-- cli でカスタムファイル生成も可能: [lodash-cli](./docs/lodash-cli.md)
+- cli でカスタムファイル生成も可能: [lodash-cli](./docs/lodash-cli.md) (cdnに頼りたくない、カスタム関数を含めたいときに)
   - ex: `lodash -p -m`
   - `template`オプションで自作関数を含めることも可能
 - 基本的な使い方
