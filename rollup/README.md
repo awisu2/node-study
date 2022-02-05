@@ -1,8 +1,8 @@
 # rollup-study
 
-[rollup\.js](https://rollupjs.org/guide/en/)
+ビルドツール rollup の勉強
 
-ビルドツール
+[rollup\.js](https://rollupjs.org/guide/en/)
 
 - browser 用には **webpack**、node.js のライブラリ用には **rollup** とかの使い分けらしい
   - よくわかってないけれど
@@ -13,6 +13,7 @@
   - commonjs のプラグインを追加: [plugins/packages/commonjs at master · rollup/plugins](https://github.com/rollup/plugins/tree/master/packages/commonjs)
   - [Plugin Development](https://rollupjs.org/guide/en/#plugin-development)
 - [rollup api](https://rollupjs.org/guide/en/#javascript-api): `rollup.rollup`, `rollup.watch` がありカスタマイズが可能
+- [トランスパイル込の package を publish する場合の考察](../howToPublish)
 
 ## hands up
 
