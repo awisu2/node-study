@@ -6,8 +6,10 @@
 - api document: [Lodash Documentation](https://lodash.com/docs/4.17.15#findIndex)
 - cdn: [lodash CDN by jsDelivr \- A CDN for npm and GitHub](https://www.jsdelivr.com/package/npm/lodash)
 
-便利だけれど、どんな関数が用意されているかを知らないと使えないので、ちょいちょいドキュメントを見るのを推奨
+簡易説明
 
+- 便利だけれど、どんな関数が用意されているかを知らないと使えないので、ちょいちょいドキュメントを見るのを推奨。
+  - `cloneDeep`, `isXXX`(isNumber)がよく使いそうで, Array, Object, stringでめんどくさいと思った汎用処理は大抵の処理はある
 - lodash の全機能は大きいため、分割して扱えるようになっている
   - 細かくは document 参照([Lodash Documentation](https://lodash.com/docs/4.17.15))
   - 各機能の大分類を catogory と言う
