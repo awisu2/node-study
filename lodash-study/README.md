@@ -1,0 +1,58 @@
+# lodash-study
+
+よくある面倒な処理を簡易にしてくれるモジュール lodash の勉强
+
+- [Lodash](https://lodash.com/)
+- api document: [Lodash Documentation](https://lodash.com/docs/4.17.15#findIndex)
+- cdn: [lodash CDN by jsDelivr \- A CDN for npm and GitHub](https://www.jsdelivr.com/package/npm/lodash)
+
+便利だけれど、どんな関数が用意されているかを知らないと使えないので、ちょいちょいドキュメントを見るのを推奨
+
+- lodash の全機能は大きいため、分割して扱えるようになっている
+  - 細かくは document 参照([Lodash Documentation](https://lodash.com/docs/4.17.15))
+  - 各機能の大分類を catogory と言う
+    - “array”, “collection”, “date”, “function”, “lang”, “object”, “number”, “seq”, “string”, “util”
+- cli でカスタムファイル生成も可能: [lodash-cli](./docs/lodash-cli.md)
+  - ex: `lodash -p -m`
+  - `template`オプションで自作関数を含めることも可能
+- 基本的な使い方
+  - `var _ = require('lodash')`　で、あとはドキュメントの関数を利用 `_.zip({any})`
+  - 特定の機能(category)に絞る場合は `var array = require('lodash/array')`
+    - この場合も関数名は変わらない
+  - 自前でファイルが必要な場合は `lodash` コマンドで生成
+- その他
+  - `lodash/core` は core 部分だけで軽いとのことだけれど具体的な範囲は不明(core 対象のドキュメントなし)
+    - `lodash core modularize` でファイル生成し実態の確認可能
+    - typescript だとコンパイルエラー(TODO：解消)
+
+## getting start
+
+node.js
+
+```bash
+yarn add -D lodash
+# fot typescript
+yarn add -D @types/lodash
+```
+
+```js
+// 全機能利用可能
+var _ = require('lodash')
+// core部分だけ
+var _ = require('lodash/core')
+// arrayだけ
+var array = require('lodash/array')
+
+// zip(各配列の同じindex値でまとめた配列を返却)する
+const ret = _.zip(['a', 'b'], [1, 2], [true, false])
+//  or
+const ret = array.zip(['a', 'b'], [1, 2], [true, false])
+// ret => [['a', 1, true], ['b', 2, false]]
+```
+
+サンプル実行
+
+```bash
+yarn install
+npm run build
+```
