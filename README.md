@@ -10,6 +10,7 @@ node についてのサンプルや勉强
 ## docs
 
 - [module](./docs/module.md): モジュールについて(ESModules, CommonJs , Amd など)、js と Node.js について
+- [how to publish](./howToPublish): パッケージのアップロードの仕方
 
 ## codes
 

@@ -1,0 +1,15 @@
+{
+  "name": "a2-hello",
+  "version": "1.0.1",
+  "description": "hello method for my first publish",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "awisu2 <awisu2@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^9.2.0"
+  }
+}
