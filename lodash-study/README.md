@@ -11,7 +11,7 @@
 - lodash の全機能は大きいため、分割して扱えるようになっている
   - 細かくは document 参照([Lodash Documentation](https://lodash.com/docs/4.17.15))
   - 各機能の大分類を catogory と言う
-    - “array”, “collection”, “date”, “function”, “lang”, “object”, “number”, “seq”, “string”, “util”
+    - "array", "collection", "date", "function", "lang", "object", "number", "seq", "string", "util"
 - cli でカスタムファイル生成も可能: [lodash-cli](./docs/lodash-cli.md)
   - ex: `lodash -p -m`
   - `template`オプションで自作関数を含めることも可能
@@ -20,10 +20,16 @@
   - 特定の機能(category)に絞る場合は `var array = require('lodash/array')`
     - この場合も関数名は変わらない
   - 自前でファイルが必要な場合は `lodash` コマンドで生成
+- よく使いそうなメソッド(後述)
 - その他
   - `lodash/core` は core 部分だけで軽いとのことだけれど具体的な範囲は不明(core 対象のドキュメントなし)
     - `lodash core modularize` でファイル生成し実態の確認可能
     - typescript だとコンパイルエラー(TODO：解消)
+
+## docs
+
+- [lodash-cli](./docs/lodash-cli.md): lodash コマンドのまとめ
+- [methods](./docs/methods.md): メソッド一覧(ざっと機能を眺められるドキュメントがなかったので作成)
 
 ## getting start
 
@@ -56,3 +62,16 @@ const ret = array.zip(['a', 'b'], [1, 2], [true, false])
 yarn install
 npm run build
 ```
+
+## よく使いそうなメソッド
+
+多分 core にまとまっているのだと思うけれど
+
+- `isXXX` 系: typeof など書かずにすむ
+- `cloneDeep`: 再起別変数の作成。適当関数(`JSON.parse(JSON.stringfy(v))`など)の回避
+  - (派生で clone, cloneDeepWith なども)
+- `random`
+- `chain`: lodash の関数を繋げて利用
+- `last`: 最後の 1 要素を取得
+- `xxxCase`: camel, kebab, lower, snake, start, upper 各種ケースの文字列を生成
+  - [Letter case \- Wikipedia](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage)
