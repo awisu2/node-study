@@ -1,6 +1,6 @@
 {
   "name": "a2-hello-rollup",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "my rollup study",
   "main": "dist/index.js",
   "types": "dist/@types/index.d.ts",

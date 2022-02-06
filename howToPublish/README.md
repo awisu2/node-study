@@ -23,12 +23,36 @@ npm への publish の仕方
    - `npm set init.author.name "sample author"`
    - `npm set init.author.email "sample@mail.address"`
 
-### 2. LICEMSE.txt の用意
+### 2. 各種ファイルの用意
+
+- LICENSE.txt: package のライセンス情報
+- .npmignore: publish の対象外にするファイル設定
+
+#### LICENSE.txt
 
 - MIT ライセンス: [The MIT License \| Open Source Initiative](https://opensource.org/licenses/MIT)
   - <YEAR>, <COPYRIGHT HOLDER> の部分を更新して利用
 
 package.json の "license" も確認
+
+#### .npmignore
+
+publish の対象外にするファイル設定
+
+以下はサンプル
+
+```npmignore
+# src directory
+src/
+docs/
+
+# config files
+rollup.config*
+tsconfig*
+
+# test
+test/
+```
 
 ## publish(アップロード)
 
