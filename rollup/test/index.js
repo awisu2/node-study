@@ -1,5 +1,5 @@
 var assert = require('assert')
-var { hello } = require('../dist/nodeBundle')
+var { hello } = require('../dist/index')
 
 describe('index.js', function () {
   it('hello"', function () {
