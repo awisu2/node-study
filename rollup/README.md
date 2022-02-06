@@ -19,7 +19,7 @@
 
 ## todos
 
-- publish 後、install したとき default export ができてない
+- [ ] publish 後、install したとき default export ができてない
   - こう書かないといけない: `import * as anypackage from 'a2-hello-rollup'`
 
 ## hands up
