@@ -11,6 +11,7 @@ node についてのサンプルや勉强
 ## docs
 
 - [module](./docs/module.md): モジュールについて(ESModules, CommonJs , Amd など)、js と Node.js について
+  - 追記: `default export` が避けられてきていることについて
 - [how to publish](./howToPublish): パッケージのアップロードの仕方
 
 ## codes
