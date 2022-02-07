@@ -23,3 +23,4 @@ node についてのサンプルや勉强
 - [rollup](./rollup): rollup の簡易まとめ
 - [process](./process): process の管理、強制終了、環境変数、コマンドライン引数、プロセス ID、動作プラットフォーム など
 - [lodash](./lodash-study): lodsh のまとめ
+- [regexp](./regexp-study): regexp (正規表現)のまとめ
