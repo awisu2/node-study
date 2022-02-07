@@ -28,8 +28,8 @@ node についてのサンプルや勉强
 
 ### server
 
-- 公式(非フレームワーク): [入門ガイド \| Node\.js](https://nodejs.org/ja/docs/guides/getting-started-guide/)
-- [Express \- Node\.js Web アプリケーション・フレームワーク](https://expressjs.com/ja/)
+- [http](./http-study): node.js 標準 http server/request モジュール
+- [express](./express-study): 老舗 saerver
 - [Meteor Software: A Platform to Build, Host, Deploy and Scale Full\-Stack Javascript Applications](https://www.meteor.com/)
 - [NestJS \- A progressive Node\.js framework](https://nestjs.com/)
 - [koajs/koa: Expressive middleware for node\.js using ES2017 async functions](https://github.com/koajs/koa)
