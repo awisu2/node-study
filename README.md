@@ -11,6 +11,7 @@ node についてのサンプルや勉强
 ## docs
 
 - [module](./docs/module.md): モジュールについて(ESModules, CommonJs , Amd など)、js と Node.js について
+  - 追記: `default export` が避けられてきていることについて
 - [how to publish](./howToPublish): パッケージのアップロードの仕方
 
 ## codes
@@ -19,9 +20,11 @@ node についてのサンプルや勉强
 - [gyp](./gyp): node-gyp についての勉强
 - [childprocess](./childprocess): node-gyp についての勉强
 - [os](./os): os モジュールを利用したサンプル
-- [rollup](./rollup): rollup の簡易まとめ
+- [rollup\-study](https://github.com/awisu2/rollup-study): rollup の勉强まとめ
+  - [./rollup](./rollup): rollup の簡易まとめ
 - [process](./process): process の管理、強制終了、環境変数、コマンドライン引数、プロセス ID、動作プラットフォーム など
 - [lodash](./lodash-study): lodsh のまとめ
+- [regexp](./regexp-study): regexp (正規表現)のまとめ
 
 ### server
 

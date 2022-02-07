@@ -34,6 +34,26 @@
 - ES Modules を html からロードする際は type="module" として宣言する
   - `<scpript type="module" src="js/module.js"></scriipt>`
 
+## default export が避けられてきていることについて
+
+rollup で `export default` をすると警告が出る、rollup 的には named export を利用してくれとのこと。ちょっと調べた感じ根が深そうですが、全体的には named export 使ってくれとのこと。(named export で検索すると色々出てきます)
+
+typescript でも, `default export` の結果を受け取る場合 `import * as anyModule from 'anyModule'` の用に記述する必要があり named export にしておいたほうがすんなり書ける感じ
+
+default export 例
+
+```js
+export default function hello() {}
+```
+
+named export 例
+
+```js
+export function hello() {}
+// or
+export { hello }
+```
+
 ## links
 
 - [ブラウザで覚える ES Modules 入門 \- JavaScript でモジュールを使う時代 \- ICS MEDIA](https://ics.media/entry/16511/)
