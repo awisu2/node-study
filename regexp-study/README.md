@@ -5,10 +5,6 @@
 - [RegExp \- JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 - 正規表現の仕様: [正規表現 \- JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions)
 
-- `(?<{key}>abc)`: 特殊正規表現, exec や matchAll などで groups が返却されるようになる
-  - groups: `{key: match文字列}` のオブジェクト
-  - [グループと範囲 \- JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
-
 ## サンプル
 
 - `/ab+c/i` において`ab+c`の部分を source, `i`の部分を flag という
@@ -51,6 +47,10 @@ assert.equal(re2.source, re3.source)
 - exec と test と search: それぞれ最初に一致したものにより返却 test は boolean, search は index
 - exec, match, matchAll: 一致した結果の詳細を返却
   - exec は先頭 1 つ固定, match はフラグによる, matchAll は g フラグ強制
+- `(?<{key}>abc)`: 特殊正規表現, exec や matchAll などで groups が返却されるようになる
+  - groups: `{key: match文字列}` のオブジェクト
+  - [グループと範囲 \- JavaScript \| MDN](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)
+- dフラグ: exec や matchAllなどでindicesが返却されるようになる
 
 各種説明
 
