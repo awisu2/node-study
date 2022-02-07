@@ -30,8 +30,9 @@ node についてのサンプルや勉强
 
 - [http](./http-study): node.js 標準 http server/request モジュール
 - [express](./express-study): 老舗 saerver
-- [Meteor Software: A Platform to Build, Host, Deploy and Scale Full\-Stack Javascript Applications](https://www.meteor.com/)
 - [NestJS \- A progressive Node\.js framework](https://nestjs.com/)
 - [koajs/koa: Expressive middleware for node\.js using ES2017 async functions](https://github.com/koajs/koa)
 - [Fastify, Fast and low overhead web framework, for Node\.js](https://www.fastify.io/)
 - [AdonisJS \- A fully featured web framework for Node\.js](https://adonisjs.com/)
+- [meteor](./meteor-study)
+  - [] TOOD: ちゃちゃっと触るには重いので、必要になったら
