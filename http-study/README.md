@@ -8,6 +8,7 @@ node.js 標準の http server 及びクライアントの勉強まとめ
 Note
 
 - 大きく、Server と Request の機能を持ち。それらをサポートする Agent, ClientRequest, ServerResponse, IncomingMessage, OutgoingMessage で構成される
+- サーバ用途では、html ファイルなどを返却しようとしたら _ファイル読み込み > 返却_ の用にベタな書き方になるのでフレームワークを使ったほうが楽
 - http.METHODS, http.STATUS_CODES をコンスト値で保有
 
 ## sample

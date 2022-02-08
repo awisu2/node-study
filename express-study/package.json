@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "express-generator": "^4.16.1"
   }
 }
