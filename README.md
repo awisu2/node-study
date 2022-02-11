@@ -10,15 +10,16 @@ node についてのサンプルや勉强
 
 ## docs
 
-- [module](./docs/module.md): モジュールについて(ESModules, CommonJs , Amd など)、js と Node.js について
-  - 追記: `default export` が避けられてきていることについて
-- [how to publish](./howToPublish): パッケージのアップロードの仕方
+- [module](./docs/module.md): what module (ESModules, CommonJs , Amd...etc), about the relationship between js and node.js
+  - postscript: `default export` が避けられてきていることについて
+- [how to publish](./howToPublish): how to npm package publish to npmjs.com
+- [sourcemap](./docs/sourcemap.md): what is sourcemap
 
 ## codes
 
 - [mocha](./mocha): unit test
-- [gyp](./gyp): node-gyp についての勉强
-- [childprocess](./childprocess): node-gyp についての勉强
+- [gyp](./gyp): summary of study about node-gyp
+- [childprocess](./childprocess): summary of study about node-gyp
 - [os](./os): os モジュールを利用したサンプル
 - [rollup\-study](https://github.com/awisu2/rollup-study): rollup の勉强まとめ
   - [./rollup](./rollup): rollup の簡易まとめ
