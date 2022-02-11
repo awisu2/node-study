@@ -10,3 +10,7 @@ NOTE
 - debugger can where is problem from source code if source map exists.
   - if not, just specifiy problem area from transpiled code.
 - So i think typicaly create sourcemap when debugging, and stop create it for products.
+
+## todo
+
+- [] actually usecase
