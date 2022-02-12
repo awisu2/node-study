@@ -14,6 +14,7 @@ node についてのサンプルや勉强
   - postscript: `default export` が避けられてきていることについて
 - [how to publish](./howToPublish): how to npm package publish to npmjs.com
 - [sourcemap](./docs/sourcemap.md): what is sourcemap
+- [use strict](./docs/useStrict.md)
 
 ## codes
 
