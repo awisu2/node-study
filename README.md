@@ -10,9 +10,9 @@ node についてのサンプルや勉强
 
 ## docs
 
-- [module](./docs/module.md): what module (ESModules, CommonJs , Amd...etc), about the relationship between js and node.js
+- [module](./docs/module.md): what module (ESModules, CommonJs , Amd...etc), about the relationship between javascript and node.js
   - postscript: `default export` が避けられてきていることについて
-- [how to publish](./howToPublish): how to npm package publish to npmjs.com
+- [how to publish](./howToPublish): how to create & publish npm package to npmjs.com
 - [sourcemap](./docs/sourcemap.md): what is sourcemap
 - [use strict](./docs/useStrict.md): what use strict
 
@@ -23,6 +23,7 @@ node についてのサンプルや勉强
 - [os](./os): os モジュールを利用したサンプル
 - [process](./process): process の管理、強制終了、環境変数、コマンドライン引数、プロセス ID、動作プラットフォーム など
 - [regexp](./regexp-study): regexp (正規表現)のまとめ
+- [mouse](./mouse): mouse position and cursor
 
 ### tools
 
