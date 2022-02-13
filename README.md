@@ -14,27 +14,39 @@ node についてのサンプルや勉强
   - postscript: `default export` が避けられてきていることについて
 - [how to publish](./howToPublish): how to npm package publish to npmjs.com
 - [sourcemap](./docs/sourcemap.md): what is sourcemap
-- [use strict](./docs/useStrict.md)
+- [use strict](./docs/useStrict.md): what use strict
 
 ## codes
 
-- [mocha](./mocha): unit test
-- [gyp](./gyp): summary of study about node-gyp
+- [array](./array-study): array
 - [childprocess](./childprocess): summary of study about node-gyp
 - [os](./os): os モジュールを利用したサンプル
-- [rollup\-study](https://github.com/awisu2/rollup-study): rollup の勉强まとめ
-  - [./rollup](./rollup): rollup の簡易まとめ
 - [process](./process): process の管理、強制終了、環境変数、コマンドライン引数、プロセス ID、動作プラットフォーム など
-- [lodash](./lodash-study): lodsh のまとめ
 - [regexp](./regexp-study): regexp (正規表現)のまとめ
+
+### tools
+
+- [lodash](./lodash-study): lodsh のまとめ
+
+### test
+
+- [mocha](./mocha): unit test
+
+### transpile
+
+- [rollup\-study](https://github.com/awisu2/rollup-study): rollup の勉强まとめ - [./rollup](./rollup): rollup の簡易まとめ
 
 ### server
 
 - [http](./http-study): node.js 標準 http server/request モジュール
-- [express](./express-study): 老舗 saerver
+- [express](./express-study): long-established server
 - [NestJS \- A progressive Node\.js framework](https://nestjs.com/)
 - [koajs/koa: Expressive middleware for node\.js using ES2017 async functions](https://github.com/koajs/koa)
 - [Fastify, Fast and low overhead web framework, for Node\.js](https://www.fastify.io/)
 - [AdonisJS \- A fully featured web framework for Node\.js](https://adonisjs.com/)
 - [meteor](./meteor-study)
   - [] TOOD: ちゃちゃっと触るには重いので、必要になったら
+
+### universal
+
+- [gyp](./gyp): summary of study about node-gyp
