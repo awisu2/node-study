@@ -77,3 +77,4 @@ npm run build
 - `last`: 最後の 1 要素を取得
 - `xxxCase`: camel, kebab, lower, snake, start, upper 各種ケースの文字列を生成
   - [Letter case \- Wikipedia](https://en.wikipedia.org/wiki/Letter_case#Stylistic_or_specialised_usage)
+- `defaultsDeep`: set default value to object(deep).
