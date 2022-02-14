@@ -12,6 +12,10 @@ NOTE
   - onmouseout
   - onmousedown
   - onmouseup
+- events just run each case. it's mean need set status we need.(ex: now pushing or not)
+- return parameters
+  - clientX, clientY: absolute position on display
+  - offsetX, offsetY: offset position
 
 ## about offsetX/Y
 
