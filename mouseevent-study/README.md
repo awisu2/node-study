@@ -49,13 +49,22 @@ Latest version is in this repository.
 
 ```js
 window.onload = () => {
+  const bodyRect = document.body.getBoundingClientRect()
+
   // any element
-  function setEvents(el, elText, params) {
-    params.elClientX = el.clientX
-    params.elClientY = el.clientY
-    const boundingRect = (el == window ? document.body : el).getBoundingClientRect()
-    params.elLeft = boundingRect.left
-    params.elTop = boundingRect.top
+  function setEvents(el, elText) {
+    const isWindow = el == window
+    const rect = isWindow ? bodyRect : el.getBoundingClientRect()
+    const params = {
+      isMouseOver: false,
+      isMouseDown: false,
+      clientX: 0,
+      clientY: 0,
+      offsetX: 0,
+      offsetY: 0,
+      isWindow: isWindow,
+      rect: rect
+    }
 
     el.onmousemove = (ev) => {
       params.clientX = ev.clientX
@@ -95,22 +104,11 @@ window.onload = () => {
       '<br />' +
       `offsetX: ${params.offsetX}, offsetY: ${params.offsetY}` +
       '<br />' +
-      `(element)left: ${params.elLeft}, top: ${params.elTop}` +
+      `(element)left: ${params.rect.left}, top: ${params.rect.top}` +
       '<br />' +
       `(event - element)ClientX - left: ${
-        params.clientX - params.elLeft
-      }, ClientY - top: ${params.clientY - params.elTop}`
-  }
-
-  const params = {
-    isMouseOver: false,
-    isMouseDown: false,
-    clientX: 0,
-    clientY: 0,
-    offsetX: 0,
-    offsetY: 0,
-    elTop: 0,
-    elLeft: 0
+        params.clientX - (params.isWindow ? 0 : params.rect.left)
+      }, ClientY - top: ${params.clientY - (params.isWindow ? 0 : params.rect.top)}`
   }
 
   const doc = document.getElementById('doc')
@@ -120,47 +118,62 @@ window.onload = () => {
   const box2In = document.getElementById('box2-in')
   const box3 = document.getElementById('box3')
 
-  setEvents(window, doc, { ...params })
-  setEvents(box, box, { ...params })
-  setEvents(box2, box2Text, { ...params })
-  setEvents(box2In, box2In, { ...params })
-  setEvents(box3, box3, { ...params })
+  setEvents(window, doc)
+  setEvents(box, box)
+  setEvents(box2, box2Text)
+  setEvents(box2In, box2In)
+  setEvents(box3, box3)
 }
 ```
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mouse event test</title>
+    <style>
+      * {
+        cursor: arrow;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mouse event test</title>
-</head>
+      .box {
+        width: 500px;
+        border: solid 1px #000;
+      }
 
-<body>
-  <h1>mouse event test</h1>
-  <p id="doc"></p>
+      .box-sm {
+        width: 400px;
+        border: solid 1px #000;
+      }
+    </style>
+  </head>
 
-  <h2>element</h2>
-  <ul>
-    <li>run only element innner</li>
-  </ul>
-  <div id="box" style="width: 300px; height: 300px; border: solid 1px #000;"></div>
+  <body>
+    <h1>mouse event test</h1>
+    <p id="doc"></p>
 
-  <h2>set style="position: relative;"</h2>
-  <ul>
-    <li> change offetX/Y</li>
-  </ul>
-  <div id="box2" style="position: relative; width: 300px; height: 300px; border: solid 1px #000; margin-left: 100px;">
-    <div id="box2Text"></div>
-    <div id="box3" style="position: relative; width: 200px; height: 150px; border: solid 1px #000; margin-left: 50px;">
+    <h2>element</h2>
+    <ul>
+      <li>run only element innner</li>
+    </ul>
+    <div id="box" class="box"></div>
 
+    <h2>set style=" position: relative;"</h2>
+    <ul>
+      <li>change offetX/Y</li>
+    </ul>
+    <div id="box2" style="position: relative; margin-left: 100px;" class="box">
+      <div id="box2Text"></div>
+      <div id="box2-in" style="position: relative; margin: 50px;" class="box-sm"></div>
     </div>
 
-    <script src="./index.js"></script>
-</body>
+    <h2>set style="padding: 50px;"</h2>
+    <div id="box3" style="padding: 50px;" class="box"></div>
 
+    <script src="./index.js"></script>
+  </body>
 </html>
 ```
