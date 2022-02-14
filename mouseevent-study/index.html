@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mouse event test</title>
+  <style>
+    * {
+      cursor: arrow;
+    }
+
+    .box {
+      width: 500px;
+      border: solid 1px #000;
+    }
+
+    .box-sm {
+      width: 400px;
+      border: solid 1px #000;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>mouse event test</h1>
+  <p id="doc"></p>
+
+  <h2>element</h2>
+  <ul>
+    <li>run only element innner</li>
+  </ul>
+  <div id="box" class="box"></div>
+
+  <h2>set style=" position: relative;"</h2>
+  <ul>
+    <li> change offetX/Y</li>
+  </ul>
+  <div id="box2" style="position: relative; margin-left: 100px;" class="box">
+    <div id="box2Text"></div>
+    <div id="box2-in" style="position: relative; margin: 50px;" class="box-sm">
+    </div>
+  </div>
+
+  <h2>set style="padding: 50px;"</h2>
+  <div id="box3" style="padding: 50px;" class="box"></div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
