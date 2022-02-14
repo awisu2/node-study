@@ -21,6 +21,36 @@
 
 ## sample code
 
+### promise
+
+- can't use childprocess. (return value of `exec()`)
+  - `childprocess.kill()`, `childprocess.on(...)`
+
+```js
+const util = require('util')
+const exec = util.promisify(require('child_process').exec)
+const os = require('os')
+
+function fixOption(opt) {
+  if (!opt) opt = {}
+  if (os.platform == 'win32') opt['windowsHide'] = true
+  return opt
+}
+
+function lsExample(opt) {
+  return exec('ls', fixOption(opt))
+}
+
+async function main() {
+  const { stdout, stderr } = await lsExample()
+  console.log(stdout, stderr)
+}
+
+main()
+```
+
+### directory
+
 ```js
 const { exec } = require('child_process')
 
@@ -79,22 +109,6 @@ Note: ここで起動や発生と書いているのは spawn の翻訳として
 
 - can't set arguments by array
 - has callback
-
-### can be promised
-
-note: copy from official site code
-
-```js
-const util = require('util')
-const exec = util.promisify(require('child_process').exec)
-
-async function lsExample() {
-  const { stdout, stderr } = await exec('ls')
-  console.log('stdout:', stdout)
-  console.error('stderr:', stderr)
-}
-lsExample()
-```
 
 ## 細かい挙動
 
