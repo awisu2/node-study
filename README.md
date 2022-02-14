@@ -23,7 +23,7 @@ node についてのサンプルや勉强
 - [os](./os): os モジュールを利用したサンプル
 - [process](./process): process の管理、強制終了、環境変数、コマンドライン引数、プロセス ID、動作プラットフォーム など
 - [regexp](./regexp-study): regexp (正規表現)のまとめ
-- [mouse](./mouse): mouse position and cursor
+- [mouseevent](./mouseevent-study): [js] get mouse position, up/down
 
 ### tools
 
