@@ -202,7 +202,7 @@ var 4.17.15 `lodash modularize` より
 - at
 - create
 - defaults
-- defaultsDeep
+- defaultsDeep: set default value with deep.
 - entries
 - entriesIn
 - extend
