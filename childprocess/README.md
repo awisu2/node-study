@@ -18,6 +18,7 @@
   - [Child process \| Node\.js v17\.5\.0 Documentation](https://nodejs.org/api/child_process.html#subprocessstdout)
   - `subprocess.stdout.on('data', (data) => {})`
   - it seems to be returned when the process is free, it is not a very definitive return.
+- exec() can be promised, but it's not always good. becauce the exec() returns meaningful value. some pattern use this value.
 
 ## sample code
 
