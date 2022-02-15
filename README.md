@@ -51,3 +51,7 @@ node についてのサンプルや勉强
 ### universal
 
 - [gyp](./gyp): summary of study about node-gyp
+
+## samples
+
+- [promisesUnderControl](./samples/promisesUnderControl.ts): Multiple promises with the specified number of concurrent executions
