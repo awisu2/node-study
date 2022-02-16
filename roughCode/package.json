@@ -1,0 +1,11 @@
+{
+  "name": "roughCode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "awisu2",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
+}

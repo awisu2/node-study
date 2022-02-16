@@ -8,6 +8,10 @@ node についてのサンプルや勉强
     - 利用可能な version に落とす変換なので、コンパイルではなくトランスパイルと言うらしい
 - [トランスパイル込の package を publish する場合の考察](./howToPublish)
 
+## summary
+
+- [rough code](./roughCode/): for check syntax easy
+
 ## docs
 
 - [module](./docs/module.md): what module (ESModules, CommonJs , Amd...etc), about the relationship between javascript and node.js
@@ -22,6 +26,7 @@ node についてのサンプルや勉强
 - [childprocess](./childprocess): summary of study about node-gyp
 - [os](./os): os モジュールを利用したサンプル
 - [process](./process): process の管理、強制終了、環境変数、コマンドライン引数、プロセス ID、動作プラットフォーム など
+- [promise](./promise-study): summary of my promise study
 - [regexp](./regexp-study): regexp (正規表現)のまとめ
 - [mouseevent](./mouseevent-study): [js] get mouse position, up/down
 
