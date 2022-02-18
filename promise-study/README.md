@@ -8,9 +8,12 @@
 - `util.promisify` can change promise a function that has callback function as an argument with error and value
   - can change node's library. ex: `util.promisify(fs.stat)`, `util.promisify(childprocess.exec)`
 - promise's `.then(value => {})` can chain
-- week(what my think)
+- NOTE (what my think)
   - promise cannot use direct return values. For example, exec of childProcess has process information in the return value in addition to the callback, and uses it to get pid or kill.
     - type of exec(): `function exec(command: string, callback?: (error: ExecException | null, stdout: string, stderr: string) => void): ChildProcess`
+  - is a `promise` an alternative to `setTimeout(() => {}, 0)` ?
+    - if it's just asynchronous execution, i thnk I'll use settimeout unless there's a reason.
+    - the apparent operation is the same, but the usage is different. i haven't measured it, but it feels a little heavy.
 
 ## codes
 
