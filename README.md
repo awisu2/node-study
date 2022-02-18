@@ -11,6 +11,7 @@ node についてのサンプルや勉强
 ## summary
 
 - [rough code](./roughCode/): for check syntax easy
+- [awisu2/typescript\-study: summary of my typescript study](https://github.com/awisu2/typescript-study)
 
 ## docs
 
