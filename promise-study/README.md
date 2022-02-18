@@ -13,6 +13,7 @@
     - type of exec(): `function exec(command: string, callback?: (error: ExecException | null, stdout: string, stderr: string) => void): ChildProcess`
   - is a `promise` an alternative to `setTimeout(() => {}, 0)` ?
     - may be yes promise run before setTimeout 0.
+      - if you need a lot of background tasks and smooth operation at the same time, setTimeout may be better. (ex: electron, react-native)
     - [Tasks, microtasks, queues and schedules \- JakeArchibald\.com](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 
 ## codes
