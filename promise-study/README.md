@@ -12,8 +12,8 @@
   - promise cannot use direct return values. For example, exec of childProcess has process information in the return value in addition to the callback, and uses it to get pid or kill.
     - type of exec(): `function exec(command: string, callback?: (error: ExecException | null, stdout: string, stderr: string) => void): ChildProcess`
   - is a `promise` an alternative to `setTimeout(() => {}, 0)` ?
-    - if it's just asynchronous execution, i thnk I'll use settimeout unless there's a reason.
-    - the apparent operation is the same, but the usage is different. i haven't measured it, but it feels a little heavy.
+    - may be yes promise run before setTimeout 0.
+    - [Tasks, microtasks, queues and schedules \- JakeArchibald\.com](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 
 ## codes
 
