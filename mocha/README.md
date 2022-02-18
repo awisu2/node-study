@@ -3,9 +3,10 @@
 - [mochajs/mocha: ☕️ simple, flexible, fun javascript test framework for node\.js & the browser](https://github.com/mochajs/mocha)
 - [Mocha \- the fun, simple, flexible JavaScript test framework](https://mochajs.org/)
 
-node の unittestt package の一つ
+one of the node's unittestt package
 
-- test ディレクトリ配下に作成
+- write test script under **test** directory. mocha automaticaly ditect it.
+  - info: not auto ditect **tests**. (...i tried)
 
 ## getting start
 
