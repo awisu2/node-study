@@ -6,6 +6,17 @@
 ## sample
 
 ```js
+const arr1 = [1, 2, 3]
+const arr2 = [...Array(3).keys()] // [0, 1, 2]
+const arr3 = ...Array(3).map((_, i) => i + 1) // [1, 2, 3]
+
+const arr4 = [1, 2, 3, 4, 5]
+arr4.splice(1, 3) // [1, 5]
+```
+
+### test
+
+```js
 var assert = require('assert')
 
 describe('index.js', function () {

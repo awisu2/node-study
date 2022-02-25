@@ -58,6 +58,7 @@ describe('index.js', function () {
       arr.map((v) => v + 1),
       [2, 3, 4]
     )
+    assert.deepEqual(...Array(3).map((_, i) => i + 1), [1, 2, 3])
 
     // fill
     assert.deepEqual([...arr].fill(9), [9, 9, 9])
