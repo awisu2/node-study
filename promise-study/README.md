@@ -8,13 +8,18 @@
 - `util.promisify` can change promise a function that has callback function as an argument with error and value
   - can change node's library. ex: `util.promisify(fs.stat)`, `util.promisify(childprocess.exec)`
 - promise's `.then(value => {})` can chain
-- NOTE (what my think)
-  - promise cannot use direct return values. For example, exec of childProcess has process information in the return value in addition to the callback, and uses it to get pid or kill.
-    - type of exec(): `function exec(command: string, callback?: (error: ExecException | null, stdout: string, stderr: string) => void): ChildProcess`
-  - is a `promise` an alternative to `setTimeout(() => {}, 0)` ?
-    - may be yes promise run before setTimeout 0.
-      - if you need a lot of background tasks and smooth operation at the same time, setTimeout may be better. (ex: electron, react-native)
-    - [Tasks, microtasks, queues and schedules \- JakeArchibald\.com](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
+- Promise's functions
+  - [Promise\.all\(\)](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/all): run multi promise
+
+**MORE**
+
+- If you use promise for a function that hasa a meaningful return value, you need to consider it.
+  - ex: exec of childProcess has process information in the return value in addition to the callback, and uses it to get pid or kill.
+  - type of exec(): `function exec(command: string, callback?: (error: ExecException | null, stdout: string, stderr: string) => void): ChildProcess`
+- is a `promise` an alternative to `setTimeout(() => {}, 0)` ?
+  - may be yes promise run before setTimeout 0.
+    - if you need a lot of background tasks and smooth operation at the same time, setTimeout may be better. (ex: electron, react-native)
+  - [Tasks, microtasks, queues and schedules \- JakeArchibald\.com](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 
 ## codes
 
