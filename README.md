@@ -20,6 +20,7 @@ node についてのサンプルや勉强
 - [how to publish](./howToPublish): how to create & publish npm package to npmjs.com
 - [sourcemap](./docs/sourcemap.md): what is sourcemap
 - [use strict](./docs/useStrict.md): what use strict
+- [history](./docs/history.md): browser's history control
 
 ## codes
 
