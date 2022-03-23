@@ -50,9 +50,12 @@ function getOffset(el, callback) {
 }
 ```
 
-## sample code
+## sample code : show _client and offset position_ on browser
 
 Latest version is in this repository.
+
+<details>
+<summary>code</summary>
 
 ```js
 window.onload = () => {
@@ -185,12 +188,16 @@ window.onload = () => {
 </html>
 ```
 
-## mouse click
+</details>
+
+## sample code: check clicked mouse button
+
+- e.which is deprecated
 
 ```js
 let el: HTMLElement = document.getElementById('app')
 if (el) {
-  // left click
+  // left click: 1, 0, 0
   el.onclick = (e) => {
     console.log('click', e.button, e.buttons, e.which)
   }
@@ -205,3 +212,74 @@ if (el) {
   }
 }
 ```
+
+<details>
+
+<summary>クリックボタンチェック及び、イベント設定サンプル</summary>
+
+```ts
+export const ClickButton = {
+  NON: 0,
+  LEFT: 1,
+  CENTER: 2,
+  RIGHT: 3,
+  BACK: 4,
+  FOWARD: 5
+} as const
+type ClickButton = typeof ClickButton[keyof typeof ClickButton]
+
+export function checkClickButton(e: MouseEvent): ClickButton {
+  switch (e.button) {
+    case 0:
+      return ClickButton.LEFT
+    case 1:
+      return ClickButton.CENTER
+    case 2:
+      return ClickButton.RIGHT
+    case 3:
+      return ClickButton.BACK
+    case 4:
+      return ClickButton.FOWARD
+    default:
+      return ClickButton.NON
+  }
+}
+
+const Auxes: ClickButton[] = [
+  ClickButton.CENTER,
+  ClickButton.RIGHT,
+  ClickButton.BACK,
+  ClickButton.FOWARD
+]
+
+export function setOnClickEvents(
+  e: HTMLElement,
+  events: { button: ClickButton; event: () => void }[]
+): void {
+  const hasLeft = Boolean(events.find((e) => e.button == ClickButton.LEFT))
+  const hasAux = Boolean(events.find((e) => Auxes.includes(e.button)))
+
+  function getButtonEvent(button: ClickButton): () => void | null {
+    const e = events.find((event) => event.button == button)
+    return e ? e.event : null
+  }
+
+  if (hasLeft) {
+    e.onclick = (ev) => {
+      const button = checkClickButton(ev)
+      const event = getButtonEvent(button)
+      if (event != null) event()
+    }
+  }
+
+  if (hasAux) {
+    e.onauxclick = (ev) => {
+      const button = checkClickButton(ev)
+      const event = getButtonEvent(button)
+      if (event != null) event()
+    }
+  }
+}
+```
+
+</details>
