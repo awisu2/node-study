@@ -30,7 +30,10 @@ node についてのサンプルや勉强
 - [process](./process): process の管理、強制終了、環境変数、コマンドライン引数、プロセス ID、動作プラットフォーム など
 - [promise](./promise-study): summary of my promise study
 - [regexp](./regexp-study): regexp (正規表現)のまとめ
-- [mouseevent](./mouseevent-study): [js] get mouse position, up/down
+
+## browser
+
+- [mouseevent](./mouseevent-study/README.md): [js] get mouse position, up/down
 
 ### tools
 

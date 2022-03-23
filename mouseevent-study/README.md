@@ -16,6 +16,9 @@ NOTE
 - return parameters
   - ev.clientX, ev.clientY: absolute position on display
   - ev.offsetX, ev.offsetY: offset position
+- clickevent: codes write later
+  - onclick: left click
+  - onauxclick: without left click
 
 ## about offsetX/Y
 
@@ -180,4 +183,25 @@ window.onload = () => {
     <script src="./index.js"></script>
   </body>
 </html>
+```
+
+## mouse click
+
+```js
+let el: HTMLElement = document.getElementById('app')
+if (el) {
+  // left click
+  el.onclick = (e) => {
+    console.log('click', e.button, e.buttons, e.which)
+  }
+
+  // without left click
+  el.onauxclick = (e) => {
+    // right: 2, 0, 3
+    // center: 1, 0 ,2
+    // 進む: 4, 0, 5
+    // 戻る: 3, 0, 4
+    console.log('auxclick', e.button, e.buttons, e.which)
+  }
+}
 ```
